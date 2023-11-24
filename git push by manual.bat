@@ -25,7 +25,7 @@ echo "__________________________________________________________________________
 ::set commit_ment=깃허브 레포지토리명 변경후 첫 커밋 테스트
 ::set commit_ment=README.md 최신화
 ::set commit_ment=신규 기능 추가, 추가코드샘플 테스트, README.md 참조
-set commit_ment=flask로는 연습 개발 종료.
+set commit_ment=서비스 개발 종료.
 
 
 
