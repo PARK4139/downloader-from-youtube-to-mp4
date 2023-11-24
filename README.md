@@ -1,2 +1,13 @@
-# downloader-from-youtube-to-mp4
-This Service can download youtube video clip and video list as mp4
+# :: this service
+download videos from youtube as high quality via python script.
+
+
+# :: Service Running Requirements
+- Windows 
+- Python3 
+
+
+# :: example
+call ".\.venv\red_steps\Scripts\activate.bat"
+python download_youtube.py ""
+
