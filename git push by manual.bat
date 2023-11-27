@@ -17,15 +17,8 @@ echo "__________________________________________________________________________
 
 
 ::set commit_ment=%yyyyMMddHHmmss%
-::set commit_ment=테스트 커밋.
 ::set commit_ment=테스트 푸쉬
-::set commit_ment=프로젝트 이니셜 커밋.
-::set commit_ment=개발환경 이동 및 프로젝트 작동 테스트 완료
-::set commit_ment=깃허브 레포지토리명 변경전 백업
-::set commit_ment=깃허브 레포지토리명 변경후 첫 커밋 테스트
-::set commit_ment=README.md 최신화
-::set commit_ment=신규 기능 추가, 추가코드샘플 테스트, README.md 참조
-set commit_ment=서비스 개발 종료.
+set commit_ment=작업 이력은 README.md 의 DONE 참조요함(%yyyyMMddHHmmss%)
 
 
 
@@ -58,8 +51,7 @@ SET OPENING_DIRECTORY=%OPENING_DIRECTORY:*FOO=%
 ECHO %OPENING_DIRECTORY%
 explorer https://github.com/PARK4139/%OPENING_DIRECTORY%
 del /f "git push by auto.py"
-
-
-timeout 33
-
+@REM echo %~n0.log
+@REM timeout 15
+@REM pause
 

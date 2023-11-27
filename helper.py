@@ -43,18 +43,23 @@ def download_clips(url: str):
 
 
 if __name__ == '__main__': 
-    # url = 'https://www.youtube.com/watch?v=LXb3EKWsInQ'
-    # url = input('다운로드하고 싶은 유튜브 url :  ')
-    # url = os.getenv('YOUTUBE_VIDEO')
-    url = sys.argv[1]
-    
-    if not os.path.isdir('./storage'):
-        os.system('mkdir "storage"')
+    try:
+        # :: argument url mode 로 실행
+        urls = [
+                sys.argv[1]
+        ]
+    except:
+        # :: multi url mode 로 실행(default 실행 루틴)
+        urls = [
+            
+    ]    
+    for url in urls:
+        if not os.path.isdir('./storage'):
+            os.system('mkdir "storage"')
 
-    if '&list=' not in url: 
-        download_clip(url)
-    else:
-        download_clips(url)
-
-    os.system('del /f /s "$only_video"')
-    os.system('del /f /s "$only_sound"')
+        if '&list=' not in url: 
+            download_clip(url)
+        else:
+            download_clips(url)
+        os.system('echo y | del /f /s "$only_video"')
+        os.system('echo y | del /f /s "$only_sound"')
