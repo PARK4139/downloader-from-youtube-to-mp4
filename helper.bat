@@ -1,3 +1,3 @@
 call ".\.venv\red_steps\Scripts\activate.bat"
-python helper.py "https://www.youtube.com/watch?v=LC4rfauJKPc"
+cmd /k python helper.py "C:\Users\WIN10PROPC3\Desktop\services\helper-from-video-to-merged\a.webm" "C:\Users\WIN10PROPC3\Desktop\services\helper-from-video-to-merged\b.webm"
 timeout 600
