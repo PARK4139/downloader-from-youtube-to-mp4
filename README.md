@@ -3,7 +3,7 @@ merge video and sound via ffmpeg.
 
 
 # :: Service Running Requirements
-- Windows 
+- Windows 10
 - Python3 
 - ffmpeg
 
