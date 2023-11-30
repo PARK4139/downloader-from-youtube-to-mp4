@@ -19,45 +19,6 @@ def is_regex_searched(string, regex):
 
   
 
-def get_length_of_mp3(target_address):
-    from mutagen.mp3 import MP3
-    try:
-        audio = MP3(target_address)
-        return audio.info.length
-    except Exception as e:
-        print('20231129003814')
-
-
-def helper_speak(text):
-    from gtts import gTTS
-    import time
-    address = rf'{os.getcwd()}\.sound\{text}.mp3'
-
-    try:
-        os.makedirs(rf'.\.sound')
-    except Exception as e:
-        pass
-
-    # :: 가지고 있는 mp3 파일 확인
-    if os.path.exists(address):
-        os.system(rf'cmd.exe /C call "{address}"')
-
-    else:
-        gtts = gTTS(text=text, lang='ko')
-        gtts.save(address)
-        os.system(rf'cmd.exe /C call "{address}"')
-
-
-
-    # :: mp3 파일의 재생 길이 만큼 대기
-    length_of_mp3 = get_length_of_mp3(address)
-    length_of_mp3 = float(length_of_mp3)
-    length_of_mp3 = round(length_of_mp3, 1)
-    # time.sleep(length_of_mp3*0.95)
-    time.sleep(length_of_mp3 * 1.00)
-    # time.sleep(length_of_mp3 * 1.05)
-
-
 if __name__ == '__main__':
     try:
         # python 코드 실행 하며 인자 받아오기
@@ -69,7 +30,7 @@ if __name__ == '__main__':
         directories = ["storage"]
         for directory in directories:
             if not os.path.isdir(rf'./{directory}'):
-                os.makedirs(rf'mkdir {directory}')
+                os.makedirs(rf'{directory}')
 
         
         # :: yotube 에서 고해상도 음성 없는 영상과 음성을 받아 하나의 영상으로 merge.

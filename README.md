@@ -14,4 +14,4 @@ python helper.py "%USERPROFILE%\Desktop\services\helper-from-video-to-merged\tes
 
 
 # :: DONE
-2023 11 28 00:46:28 developing temporary done.
+2023 12 01 03:14:55 this service is developed.
